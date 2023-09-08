@@ -18,6 +18,7 @@ set(SOURCES
     src/main.cpp
     src/fileutil.cpp    
     src/lex.cpp
+    src/tokenize.cpp
 )
 
 # add the executable

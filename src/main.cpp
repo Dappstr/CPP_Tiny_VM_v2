@@ -4,6 +4,7 @@
 
 #include "../include/fileutil.h"
 #include "../include/lex.h"
+#include "../include/tokenize.h"
 
 int main(int argc, char* argv[]) {
     char* path = argv[1];
@@ -13,13 +14,9 @@ int main(int argc, char* argv[]) {
 
     //Lex
     std::vector<std::string> lexemes = lex(std::move(contents));
-    
-    int num_lexemes = 1;
-    for(auto& lexeme : lexemes) {
-        std::cout << "Lexeme " << num_lexemes << ' ' << lexeme << '\n';
-    }
 
     //Tokenize
+    std::vector<Token> tokens = tokenize(std::move(lexemes));
 
     //Parse
 
