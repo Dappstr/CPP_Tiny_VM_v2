@@ -1,4 +1,4 @@
-var a = 5
+var a = 20
 push #10
 push a
 print
